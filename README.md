@@ -1,5 +1,10 @@
 # isdir
 
+[![Build Status](https://travis-ci.org/nelsonic/isdir.svg)](https://travis-ci.org/nelsonic/isdir)
+[![Test Coverage](https://codeclimate.com/github/nelsonic/isdir/badges/coverage.svg)](https://codeclimate.com/github/nelsonic/isdir)
+[![Code Climate](https://codeclimate.com/github/nelsonic/isdir/badges/gpa.svg)](https://codeclimate.com/github/nelsonic/isdir)
+
+
 `isdir` checks if a given file descriptor `fd` is a directory or not.  
 (wrapper around node's native `fs.stat.isDirectory()` method )
 
@@ -36,8 +41,10 @@ isdir(fd, callback);
 or the *shorter* version:
 
 ```js
-var isdir = require('isdir'); // don't do this! it kills kittens!
-isdir(__dirname, function cb(er, dir) { (!err && dir) ? dirop() : fileop() });
+var isdir = require('isdir'); // don't do this! it kills kittens! keep it clear
+isdir(__dirname, function cb(er, dir) {
+  (!err && dir) ? dirop() : fileop(); // dirop() and fileop() are your funs.
+ });
 
 ```
 
