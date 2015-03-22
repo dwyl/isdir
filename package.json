@@ -1,8 +1,8 @@
 {
   "name": "isdir",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "check if a descriptor is a directory.",
-  "main": "index.js",
+  "main": "isdir.js",
   "scripts": {
     "quick": "./node_modules/tape/bin/tape ./test/*.js",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/tape/bin/tape ./test/*.js",

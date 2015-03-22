@@ -58,6 +58,10 @@ if(dir) {
 }
 ```
 
+Influenced by: https://github.com/jonschlinkert/is-directory
+(We wanted lighter error-handling and more tests)
+
+
 [npm-image]: https://img.shields.io/npm/v/isdir.svg?style=flat
 [npm-url]: https://npmjs.org/package/isdir
 [node-version-image]: https://img.shields.io/node/v/isdir.svg?style=flat
