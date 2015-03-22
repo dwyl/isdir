@@ -15,7 +15,7 @@
     "url": "https://github.com/nelsonic/isdir.git"
   },
   "engines": {
-  "node": ">=0.10.0"
+  "node": ">=0.10"
   },
   "keywords": [
     "is",

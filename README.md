@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/nelsonic/isdir.svg)](https://travis-ci.org/nelsonic/isdir)
 [![Test Coverage](https://codeclimate.com/github/nelsonic/isdir/badges/coverage.svg)](https://codeclimate.com/github/nelsonic/isdir)
 [![Code Climate](https://codeclimate.com/github/nelsonic/isdir/badges/gpa.svg)](https://codeclimate.com/github/nelsonic/isdir)
-
+[![Node.js Version][node-version-image]][node-version-url] [![NPM Version][npm-image]][npm-url]
+[![Dependency Status](https://david-dm.org/nelsonic/esta.svg)](https://david-dm.org/nelsonic/esta)
 
 `isdir` checks if a given file descriptor `fd` is a directory or not.  
 (wrapper around node's native `fs.stat.isDirectory()` method )
@@ -22,10 +23,9 @@ npm install isdir --save
 var isdir = require('isdir');
 var fd    = __dirname; // or what ever you need to check
 
-// named callback function:
-function callback(err, dir) {
+isdir(fd, function callback(err, dir) { // named callback function
   if(err) { // you will get an error back if fd was not a readable file or dir
-    console.log("Oops: " + err); // handle errors in your prefered way.
+    console.log("Oopsy: " + err); // handle errors in your preferred way.
   }
   else if(dir) {
     console.log(fd + " is a directory!"); // do something with the directory
@@ -33,17 +33,15 @@ function callback(err, dir) {
   else {
     console.log(fd + " is NOT a directory!") // its a file
   }
-}
-
-isdir(fd, callback);
+});
 ```
 
 or the *shorter* version:
 
 ```js
-var isdir = require('isdir'); // don't do this! it kills kittens! keep it clear
+var isdir = require('isdir'); // just remember to keep your code clear
 isdir(__dirname, function cb(er, dir) {
-  (!err && dir) ? dirop() : fileop(); // dirop() and fileop() are your funs.
+  (!err && dir) ? dirop() : fileop(); // dirop() and fileop() defined by you.
  });
 
 ```
@@ -51,7 +49,11 @@ isdir(__dirname, function cb(er, dir) {
 
 ## About
 
+We needed a ***fully tested*** *simple* call to check if a descriptor
+is a directory for our [***faster***](https://github.com/ideaq/faster) project.
+
 This module *deliberately* only exposes a single ***asynchronous*** method.
+
 If you prefer to use it *sychronously*
 (go for a walk and consider switching programming languages)
 and if you still want to use it sync just assign the output to varaiable
@@ -65,3 +67,14 @@ if(dir) {
   // do what you want with your directory
 }
 ```
+
+[npm-image]: https://img.shields.io/npm/v/isdir.svg?style=flat
+[npm-url]: https://npmjs.org/package/isdir
+[node-version-image]: https://img.shields.io/node/v/isdir.svg?style=flat
+[node-version-url]: http://nodejs.org/download/
+[downloads-image]: https://img.shields.io/npm/dm/isdir.svg?style=flat
+[downloads-url]: https://npmjs.org/package/isdir
+[travis-image]: https://img.shields.io/travis/nelsonic/isdir.svg?style=flat
+[travis-url]: https://travis-ci.org/nelsonic/isdir
+[dependencies-url]: https://david-dm.org/nelsonic/isdir
+[dependencies-image]: https://david-dm.org/nelsonic/isdir.svg
