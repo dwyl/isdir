@@ -36,16 +36,6 @@ isdir(fd, function callback(err, dir) { // named callback function
 });
 ```
 
-or the *shorter* version:
-
-```js
-var isdir = require('isdir'); // just remember to keep your code clear
-isdir(__dirname, function cb(er, dir) {
-  (!err && dir) ? dirop() : fileop(); // dirop() and fileop() defined by you.
- });
-
-```
-
 
 ## About
 
