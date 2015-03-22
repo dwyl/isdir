@@ -46,25 +46,3 @@ test(chalk.cyan('async with VALID fd'), function (t) {
     t.end();
   })
 }); // end of *useful* tests
-
-
-
-// ternary for conciseness demo puroses only - DON'T do this. it kills kittens!
-
-function dirop(t,d) {
-  t.equal(d, true, chalk.green("✓ "+__dirname + " is a directory."));
-  t.end();
-}
-
-function fileop(t,d) {
-  t.equal(d, false, chalk.green("✓ "+__filename + " is a directory."));
-  t.end();
-}
-
-test(chalk.cyan('ternary async with fd: '+__dirname), function (t) {
-  isdir(__dirname, function(e, d) {  (!e && d) ? dirop(t,d) : fileop(t,d) });
-});
-
-test(chalk.cyan('ternary async with fd: '+__filename), function (t) {
-  isdir(__filename, function(e, d) { (!e && d) ? dirop(t,d) : fileop(t,d) });
-});
