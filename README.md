@@ -1,10 +1,10 @@
 # isdir
 
-[![Build Status](https://travis-ci.org/nelsonic/isdir.svg)](https://travis-ci.org/nelsonic/isdir)
-[![Test Coverage](https://codeclimate.com/github/nelsonic/isdir/badges/coverage.svg)](https://codeclimate.com/github/nelsonic/isdir)
-[![Code Climate](https://codeclimate.com/github/nelsonic/isdir/badges/gpa.svg)](https://codeclimate.com/github/nelsonic/isdir)
+[![Build Status](https://travis-ci.org/dwyl/isdir.svg)](https://travis-ci.org/dwyl/isdir)
+[![Test Coverage](https://codeclimate.com/github/dwyl/isdir/badges/coverage.svg)](https://codeclimate.com/github/dwyl/isdir)
+[![Code Climate](https://codeclimate.com/github/dwyl/isdir/badges/gpa.svg)](https://codeclimate.com/github/dwyl/isdir)
 [![Node.js Version][node-version-image]][node-version-url] [![NPM Version][npm-image]][npm-url]
-[![Dependency Status](https://david-dm.org/nelsonic/esta.svg)](https://david-dm.org/nelsonic/esta)
+[![Dependency Status](https://david-dm.org/dwyl/esta.svg)](https://david-dm.org/dwyl/esta)
 
 `isdir` checks if a given file descriptor `fd` is a directory or not.  
 (wrapper around node's native `fs.stat.isDirectory()` method )
@@ -68,7 +68,7 @@ Influenced by: https://github.com/jonschlinkert/is-directory
 [node-version-url]: http://nodejs.org/download/
 [downloads-image]: https://img.shields.io/npm/dm/isdir.svg?style=flat
 [downloads-url]: https://npmjs.org/package/isdir
-[travis-image]: https://img.shields.io/travis/nelsonic/isdir.svg?style=flat
-[travis-url]: https://travis-ci.org/nelsonic/isdir
-[dependencies-url]: https://david-dm.org/nelsonic/isdir
-[dependencies-image]: https://david-dm.org/nelsonic/isdir.svg
+[travis-image]: https://img.shields.io/travis/dwyl/isdir.svg?style=flat
+[travis-url]: https://travis-ci.org/dwyl/isdir
+[dependencies-url]: https://david-dm.org/dwyl/isdir
+[dependencies-image]: https://david-dm.org/dwyl/isdir.svg
